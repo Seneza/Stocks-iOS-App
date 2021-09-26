@@ -13,10 +13,21 @@ class WatchListViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         setupSearchController()
+        setupTitleView()
     }
-
-    func setupSearchController() {
+    
+    private func setupTitleView() {
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: view.width, height: navigationController?.navigationBar.height ?? 100))
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: titleView.width - 20, height: titleView.height))
+        label.text = "Stocks"
+        label.font = .systemFont(ofSize: 40, weight: .medium)
+        titleView.addSubview(label)
+        navigationItem.titleView = titleView
+    }
+    private func setupSearchController() {
         let resultVC = SearchResultsViewController()
+        resultVC.delegate = self
         let searchVC = UISearchController(searchResultsController: resultVC)
         searchVC.searchResultsUpdater = self
         navigationItem.searchController = searchVC
@@ -34,6 +45,14 @@ extension WatchListViewController: UISearchResultsUpdating {
         
         //Call our API here to search
         //Optimize to reduce number of searches for when a user stops typing.
+        resultsVC.update(with: ["GOOG"])
+    }
+}
+
+extension WatchListViewController: SearchResultsViewControllerDelegate {
+    func searchResultsViewControllerDidSelect(searchResult: String) {
+        //present stock details for a given selection
+        
     }
 }
 
