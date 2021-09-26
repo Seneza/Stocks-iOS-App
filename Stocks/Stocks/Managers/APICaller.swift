@@ -12,9 +12,19 @@ final class APICaller {
     static let shared = APICaller()
     
     private struct Constants {
+<<<<<<< HEAD
         static let apiKey = "YOUR-API-KEY"
         static let sandBoxApiKey = "YOUR-SANDBOX-API-KEY"
         static let baseUrl = "https://finnhub.io/api/v1/"
+||||||| 2927f32
+        static let apiKey = ""
+        static let sandBoxApiKey = ""
+        static let baseUrl = ""
+=======
+        static let apiKey = "c58e1eaad3ifmjb45la0"
+        static let sandBoxApiKey = "sandbox_c58e1eaad3ifmjb45lag"
+        static let baseUrl = "https://finnhub.io/api/v1/"
+>>>>>>> c0258be290fc3bd2f578eb0ce90f69569623a7a5
     }
     
     private init() {}
