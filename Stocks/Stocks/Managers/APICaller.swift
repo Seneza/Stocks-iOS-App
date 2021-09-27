@@ -12,8 +12,8 @@ final class APICaller {
     static let shared = APICaller()
     
     private struct Constants {
-        static let apiKey = "YOUR-API-KEY"
-        static let sandBoxApiKey = "YOUR-SANDBOX-API-KEY"
+        static let apiKey = "PUT_YOUR_API_KEY_HERE"
+        static let sandBoxApiKey = "PUT_YOUR_SANDBOX_API_KEY_HERE"
         static let baseUrl = "https://finnhub.io/api/v1/"
     }
     
@@ -65,7 +65,7 @@ final class APICaller {
         }
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data , error == nil else {
+            guard let data = data, error == nil else {
                 if let error = error {
                     completion(.failure(error))
                 }
