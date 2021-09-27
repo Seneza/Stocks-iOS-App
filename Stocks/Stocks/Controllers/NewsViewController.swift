@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TopStoriesNewsViewController: UIViewController {
+class NewsViewController: UIViewController {
     
     public let tableView = UITableView()
     override func viewDidLoad() {
