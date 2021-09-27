@@ -30,3 +30,17 @@ extension UIView {
         top + height
     }
 }
+
+// MARK: - Add Subview
+
+extension UIView {
+    /*
+     -Parameter: variadic parameter `views` allows us to pass in multiple params
+     */
+    func addSubviews(_ views: UIView...) {
+        views.forEach {
+            addSubview($0)
+        }
+        
+    }
+}
