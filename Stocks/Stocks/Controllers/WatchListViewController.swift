@@ -18,6 +18,8 @@ class WatchListViewController: UIViewController {
         setupTitleView()
     }
     
+    //MARK: - Private
+    
     private func setupTitleView() {
         let titleView = UIView(frame: CGRect(x: 0, y: 0, width: view.width, height: navigationController?.navigationBar.height ?? 100))
         
