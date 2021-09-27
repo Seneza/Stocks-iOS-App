@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		709C9E352700F54900F13755 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C9E342700F54900F13755 /* APICaller.swift */; };
+		709C9E372700F56600F13755 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C9E362700F56600F13755 /* PersistenceManager.swift */; };
+		709C9E392700F57800F13755 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C9E382700F57800F13755 /* HapticsManager.swift */; };
+		709C9E3B27010A7F00F13755 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C9E3A27010A7F00F13755 /* Extensions.swift */; };
+		709C9E3D27010E4800F13755 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C9E3C27010E4800F13755 /* SearchResultTableViewCell.swift */; };
+		709C9E3F270124EA00F13755 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C9E3E270124EA00F13755 /* SearchResponse.swift */; };
+		709C9E422701552700F13755 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C9E412701552700F13755 /* Constants.swift */; };
 		70D9CDD726FE94AE00370C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D9CDD626FE94AE00370C7D /* AppDelegate.swift */; };
 		70D9CDD926FE94AE00370C7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D9CDD826FE94AE00370C7D /* SceneDelegate.swift */; };
 		70D9CDDB26FE94AE00370C7D /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D9CDDA26FE94AE00370C7D /* WatchListViewController.swift */; };
@@ -18,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		709C9E342700F54900F13755 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		709C9E362700F56600F13755 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		709C9E382700F57800F13755 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		709C9E3A27010A7F00F13755 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		709C9E3C27010E4800F13755 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		709C9E3E270124EA00F13755 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		709C9E412701552700F13755 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		70D9CDD326FE94AE00370C7D /* Stocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D9CDD626FE94AE00370C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70D9CDD826FE94AE00370C7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		709C9E40270154FD00F13755 /* ConstantsKeys */ = {
+			isa = PBXGroup;
+			children = (
+				709C9E412701552700F13755 /* Constants.swift */,
+			);
+			path = ConstantsKeys;
+			sourceTree = "<group>";
+		};
 		70D9CDCA26FE94AE00370C7D = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +82,7 @@
 		70D9CDD526FE94AE00370C7D /* Stocks */ = {
 			isa = PBXGroup;
 			children = (
+				709C9E40270154FD00F13755 /* ConstantsKeys */,
 				70D9CDEE26FE95A000370C7D /* Other */,
 				70D9CDED26FE958800370C7D /* Managers */,
 				70D9CDEC26FE958000370C7D /* Models */,
@@ -86,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				70D9CDE126FE94B100370C7D /* LaunchScreen.storyboard */,
+				709C9E3C27010E4800F13755 /* SearchResultTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -93,6 +117,7 @@
 		70D9CDEC26FE958000370C7D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				709C9E3E270124EA00F13755 /* SearchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -100,6 +125,9 @@
 		70D9CDED26FE958800370C7D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				709C9E342700F54900F13755 /* APICaller.swift */,
+				709C9E362700F56600F13755 /* PersistenceManager.swift */,
+				709C9E382700F57800F13755 /* HapticsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -109,6 +137,7 @@
 			children = (
 				70D9CDD626FE94AE00370C7D /* AppDelegate.swift */,
 				70D9CDD826FE94AE00370C7D /* SceneDelegate.swift */,
+				709C9E3A27010A7F00F13755 /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -182,9 +211,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				709C9E392700F57800F13755 /* HapticsManager.swift in Sources */,
+				709C9E3D27010E4800F13755 /* SearchResultTableViewCell.swift in Sources */,
+				709C9E422701552700F13755 /* Constants.swift in Sources */,
 				70D9CDF426FE969A00370C7D /* StockDetailsViewController.swift in Sources */,
 				70D9CDDB26FE94AE00370C7D /* WatchListViewController.swift in Sources */,
 				70D9CDF026FE966000370C7D /* TopStoriesNewsViewController.swift in Sources */,
+				709C9E372700F56600F13755 /* PersistenceManager.swift in Sources */,
+				709C9E3B27010A7F00F13755 /* Extensions.swift in Sources */,
+				709C9E352700F54900F13755 /* APICaller.swift in Sources */,
+				709C9E3F270124EA00F13755 /* SearchResponse.swift in Sources */,
 				70D9CDD726FE94AE00370C7D /* AppDelegate.swift in Sources */,
 				70D9CDD926FE94AE00370C7D /* SceneDelegate.swift in Sources */,
 				70D9CDF226FE968000370C7D /* SearchResultsViewController.swift in Sources */,

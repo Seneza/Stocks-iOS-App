@@ -10,12 +10,13 @@ import Foundation
 
 final class APICaller {
     static let shared = APICaller()
-    
-    private struct Constants {
-        static let apiKey = "PUT_YOUR_API_KEY_HERE"
-        static let sandBoxApiKey = "PUT_YOUR_SANDBOX_API_KEY_HERE"
-        static let baseUrl = "https://finnhub.io/api/v1/"
-    }
+   
+    //MARK: - Uncomment this and use your API KEYS for the app to show any real time data
+//    private struct Constants {
+//        static let apiKey = "PUT_YOUR_API_KEY_HERE"
+//        static let sandBoxApiKey = "PUT_YOUR_SANDBOX_API_KEY_HERE"
+//        static let baseUrl = "https://finnhub.io/api/v1/"
+//    }
     
     private init() {}
     
