@@ -29,12 +29,17 @@ final class APICaller {
         }
         request(url: url(for: .search, queryParams: ["q": safeQuery]), expecting: SearchResponse.self, completion: completion)
     }
+    
+    public func news(for type: NewsViewController.`Type`, completion: @escaping(Result<[String], Error>) -> Void) {
+        let url = url(for: .topStories, queryParams: ["category": "general"])
+    }
     //get stock info
     //search stocks
     //MARK: - Private
     
     private enum Endpoint: String {
         case search
+        case topStories = "news"
     }
     
     private enum APIError: Error {
