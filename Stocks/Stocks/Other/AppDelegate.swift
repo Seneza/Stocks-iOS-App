@@ -37,9 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func debug() {
-        
+        APICaller.shared.news(for: .company(symbol: "MSFT")) { result in
+            print(result)
+        }
     }
-
 
 }
 

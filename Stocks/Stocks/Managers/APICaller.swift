@@ -10,7 +10,7 @@ import Foundation
 
 final class APICaller {
     static let shared = APICaller()
-   
+    static let day: TimeInterval = 3600 * 24
     //MARK: - Uncomment this and use your API KEYS for the app to show any real time data
 //    private struct Constants {
 //        static let apiKey = "PUT_YOUR_API_KEY_HERE"
@@ -30,8 +30,30 @@ final class APICaller {
         request(url: url(for: .search, queryParams: ["q": safeQuery]), expecting: SearchResponse.self, completion: completion)
     }
     
-    public func news(for type: NewsViewController.`Type`, completion: @escaping(Result<[String], Error>) -> Void) {
-        let url = url(for: .topStories, queryParams: ["category": "general"])
+    public func news(for type: NewsViewController.`Type`, completion: @escaping(Result<[NewsStory], Error>) -> Void) {
+        switch type {
+        case .topStories:
+            request(
+                url: url(for: .topStories, queryParams: ["category": "general"]),
+                expecting: [NewsStory].self,
+                completion: completion
+            )
+        case .company(let symbol):
+            let today = Date()
+            let oneMonthBack = today.addingTimeInterval(-(APICaller.day * 30))
+            request(
+                url: url(
+                    for: .companyNews,
+                    queryParams: [
+                        "symbol": symbol,
+                        "from": DateFormatter.newsDateFormatter.string(from: oneMonthBack),
+                        "to": DateFormatter.newsDateFormatter.string(from: today)
+                    ]
+                ),
+                expecting: [NewsStory].self,
+                completion: completion
+            )
+        }
     }
     //get stock info
     //search stocks
@@ -40,6 +62,7 @@ final class APICaller {
     private enum Endpoint: String {
         case search
         case topStories = "news"
+        case companyNews = "company-news"
     }
     
     private enum APIError: Error {
